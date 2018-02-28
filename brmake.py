@@ -3,6 +3,7 @@
 # replace this file with bash script
 
 import os
+import sys
 
 UNITY_PATH = "/Applications/Unity/Unity.app/Contents/MacOS/Unity"
 
@@ -20,7 +21,7 @@ def unity_build(platform):
 
 
 if __name__ == "__main__":
-    if os.name == "posix":
+    if sys.platform == "darwin":
         unity_build("Ios")
     else:
         print("currently only available under macOS ")
